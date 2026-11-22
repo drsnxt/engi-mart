@@ -1,0 +1,42 @@
+{
+  "name": "engi-mart",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "db:push": "drizzle-kit push",
+    "db:seed": "tsx --env-file=.env scripts/seed.ts",
+    "db:verify": "tsx --env-file=.env scripts/verify-canonical-session.ts",
+    "netlify:patch": "node scripts/patch-netlify-function.mjs"
+  },
+  "dependencies": {
+    "@base-ui/react": "^1.9.0",
+    "@neon/config": "^1.9.3",
+    "@neon/env": "^1.6.4",
+    "@neondatabase/serverless": "^1.2.0",
+    "drizzle-orm": "^0.44.5",
+    "lucide-react": "^0.468.0",
+    "next": "16.4.2",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "zod": "^4.1.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/turbopack": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "dotenv": "^18.0.8",
+    "drizzle-kit": "^0.31.4",
+    "playwright": "^1.64.1",
+    "tailwindcss": "^4",
+    "tsx": "^4.20.5",
+    "typescript": "^5",
+    "vitest": "^3.2.4"
+  },
+  "packageManager": "pnpm@11.21.0"
+}

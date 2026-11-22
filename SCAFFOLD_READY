@@ -1,0 +1,7 @@
+SCAFFOLD_READY
+Generated: 2026-10-22
+Stack: Next.js 16.4.2 (App Router), React 19.3, TypeScript strict, Tailwind v4, Base UI, lucide-react
+Install: pnpm install (complete)
+Dev server: pnpm dev on http://localhost:3000 (running)
+Key routes: /, /b/demo, /b/demo/plans, /b/demo/run, /method, /legal
+Demo data only. Prices and shop details are illustrative, not real quotes.

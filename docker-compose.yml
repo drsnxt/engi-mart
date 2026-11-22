@@ -1,0 +1,21 @@
+services:
+  db:
+    image: postgres:17-alpine
+    container_name: engi-mart-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: engi
+      POSTGRES_PASSWORD: engi
+      POSTGRES_DB: engi_mart
+    ports:
+      - "5432:5432"
+    volumes:
+      - engi_mart_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U engi -d engi_mart"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  engi_mart_pgdata:

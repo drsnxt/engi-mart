@@ -1,0 +1,15 @@
+[build]
+  command = "pnpm build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22"
+  NEXT_TELEMETRY_DISABLED = "1"
+
+# Manual CLI deploys do not apply the Next.js Runtime function routes/config.
+# Static files are served first; remaining requests go to the server handler.
+[[redirects]]
+  from = "/*"
+  to = "/.netlify/functions/___netlify-server-handler"
+  status = 200
+
